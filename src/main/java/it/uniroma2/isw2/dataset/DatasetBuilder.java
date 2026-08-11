@@ -10,8 +10,12 @@ import it.uniroma2.isw2.git.GitUtils;
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class DatasetBuilder {
+
+    private static final Logger LOGGER =
+            Logger.getLogger(DatasetBuilder.class.getName());
 
     private static final String REPOSITORY_PATH =
             "C:\\Users\\gianl\\Desktop\\Università\\Magistrale\\ISW2\\ISW2_Project\\tajo";
@@ -42,10 +46,8 @@ public class DatasetBuilder {
 
         for (Release release : releases) {
 
-            System.out.println(
-                    "Processing release "
-                            + release.getReleaseId()
-            );
+            LOGGER.info(() ->
+                    "Processing release " + release.getReleaseId());
 
             RevCommit commit =
                     GitUtils
@@ -85,6 +87,6 @@ public class DatasetBuilder {
 
         GitUtils.checkoutMaster(git);
 
-        System.out.println("DONE");
+        LOGGER.info("DONE");
     }
 }

@@ -7,8 +7,12 @@ import org.json.JSONObject;
 import java.io.*;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.logging.Logger;
 
 class RetrieveTicketsID {
+
+   private static final Logger LOGGER =
+         Logger.getLogger(RetrieveTicketsID.class.getName());
 
 
 
@@ -66,7 +70,7 @@ class RetrieveTicketsID {
          for (; i < total && i < j; i++) {
             //Iterate through each bug
             String key = issues.getJSONObject(i%1000).get("key").toString();
-            System.out.println(key);
+            LOGGER.info(key);
          }  
       } while (i < total);
       return;

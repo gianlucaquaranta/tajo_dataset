@@ -8,8 +8,12 @@ import java.nio.file.Paths;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 public class CsvUtils {
+
+    private static final Logger LOGGER =
+            Logger.getLogger(CsvUtils.class.getName());
 
     private CsvUtils(){}
 
@@ -34,18 +38,22 @@ public class CsvUtils {
             classToPath.put(clazz, fullPath.toAbsolutePath().normalize());
         }
 
-        // Un'unica analisi PMD per l'intera release (molto piu' veloce che
-        // analizzare un file alla volta).
-        System.out.println(
-                "  Running PMD on " + classToPath.size() + " classes...");
-        Map<String, Integer> smellsByFile =
-                PmdAnalyzer.countSmells(
-                        List.copyOf(classToPath.values()));
+        List<Path> paths = List.copyOf(classToPath.values());
+
+        // Un'unica invocazione per l'intera release (molto piu' veloce che
+        // analizzare un file alla volta): PMD per gli smell, cloc per le LOC.
+        LOGGER.info(() ->
+                "Running PMD + cloc on " + classToPath.size() + " classes...");
+        Map<String, Integer> smellsByFile = PmdAnalyzer.countSmells(paths);
+        Map<String, Integer> locByFile = ClocAnalyzer.countLoc(paths);
 
         for (Map.Entry<String, Path> entry : classToPath.entrySet()) {
             String clazz = entry.getKey();
+            Path fullPath = entry.getValue();
+
+            int loc = locByFile.getOrDefault(fullPath.toString(), 0);
             int nSmells = smellsByFile.getOrDefault(
-                    entry.getValue().toString(), 0);
+                    fullPath.toString(), 0);
 
             writer.writeNext(
                     new String[] {
@@ -53,6 +61,7 @@ public class CsvUtils {
                             String.valueOf(releaseId),
                             releaseName,
                             clazz,
+                            String.valueOf(loc),
                             String.valueOf(nSmells)
                     }
             );
@@ -74,6 +83,7 @@ public class CsvUtils {
                         "RELEASE_ID",
                         "RELEASE_NAME",
                         "CLASS",
+                        "LOC",
                         "NSMELLS"
                 });
 

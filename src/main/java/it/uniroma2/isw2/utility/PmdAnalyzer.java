@@ -13,6 +13,8 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Conta il numero di code smell rilevati da PMD, usato per popolare la
@@ -33,6 +35,9 @@ public class PmdAnalyzer {
      * design, error prone, ecc.).
      */
     private static final String RULESET = "rulesets/java/quickstart.xml";
+
+    private static final Logger LOGGER =
+            Logger.getLogger(PmdAnalyzer.class.getName());
 
     private PmdAnalyzer() {
     }
@@ -90,8 +95,7 @@ public class PmdAnalyzer {
                         violationKey, (k, current) -> current + 1);
             }
         } catch (Exception e) {
-            System.err.println(
-                    "PMD batch analysis failed: " + e.getMessage());
+            LOGGER.log(Level.SEVERE, "PMD batch analysis failed", e);
         }
 
         return counts;

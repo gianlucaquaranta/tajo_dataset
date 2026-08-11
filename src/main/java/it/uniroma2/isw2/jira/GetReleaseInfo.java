@@ -13,9 +13,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class GetReleaseInfo {
+
+	   private static final Logger LOGGER =
+			   Logger.getLogger(GetReleaseInfo.class.getName());
 
 	   public static HashMap<LocalDateTime, String> releaseNames;
 	   public static HashMap<LocalDateTime, String> releaseID;
@@ -77,15 +82,14 @@ public class GetReleaseInfo {
 		            }
 
 		         } catch (Exception e) {
-		            System.out.println("Error in csv writer");
-		            e.printStackTrace();
+		            LOGGER.log(Level.SEVERE, "Error in csv writer", e);
 		         } finally {
 		            try {
 		               fileWriter.flush();
 		               fileWriter.close();
 		            } catch (IOException e) {
-		               System.out.println("Error while flushing/closing fileWriter !!!");
-		               e.printStackTrace();
+		               LOGGER.log(Level.SEVERE,
+		                       "Error while flushing/closing fileWriter !!!", e);
 		            }
 		         }
 		         return;
