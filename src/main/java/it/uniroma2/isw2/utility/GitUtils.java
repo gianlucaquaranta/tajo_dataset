@@ -1,6 +1,7 @@
-package it.uniroma2.isw2.git;
+package it.uniroma2.isw2.utility;
 
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.lib.ObjectId;
 import org.eclipse.jgit.revwalk.RevCommit;
 
 import java.time.Instant;
@@ -8,6 +9,8 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 
 public class GitUtils {
+
+    private static final String MAIN_BRANCH = "master";
 
     private GitUtils(){}
 
@@ -18,7 +21,17 @@ public class GitUtils {
 
         RevCommit best = null;
 
-        for (RevCommit commit : git.log().call()) {
+        // IMPORTANTE: scandire sempre la history a partire dal branch
+        // principale, non da HEAD. Dopo il checkout di una release HEAD e'
+        // detached su un commit passato, e git.log() (che parte da HEAD)
+        // vedrebbe solo i suoi antenati: tutte le release successive
+        // collasserebbero sullo stesso snapshot della prima release.
+        ObjectId branch = git.getRepository().resolve(MAIN_BRANCH);
+        Iterable<RevCommit> history = (branch != null)
+                ? git.log().add(branch).call()
+                : git.log().call();
+
+        for (RevCommit commit : history) {
 
             LocalDateTime commitDate =
                     Instant.ofEpochSecond(
@@ -65,7 +78,7 @@ public class GitUtils {
             throws Exception {
 
         git.checkout()
-                .setName("master")
+                .setName(MAIN_BRANCH)
                 .call();
     }
 }
