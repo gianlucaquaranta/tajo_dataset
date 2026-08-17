@@ -7,6 +7,8 @@ import org.json.JSONObject;
 import java.io.*;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 class RetrieveTicketsID {
@@ -53,8 +55,20 @@ class RetrieveTicketsID {
 
   
   	   public static void main(String[] args) throws IOException, JSONException {
-		   
-		   String projName ="TAJO";
+		   for (String key : retrieveTicketsID("TAJO")) {
+			   LOGGER.info(key);
+		   }
+	   }
+
+	   /**
+	    * Restituisce le key dei bug fixati del progetto interrogando JIRA
+	    * (stessa query e paginazione originali; ora ritorna la lista invece di
+	    * limitarsi a stamparla, cosi' e' riutilizzabile per il calcolo di NFix).
+	    */
+	   public static List<String> retrieveTicketsID(String projName)
+			   throws IOException, JSONException {
+
+	   List<String> ticketsID = new ArrayList<>();
 	   Integer j = 0, i = 0, total = 1;
       //Get JSON API for closed bugs w/ AV in the project
       do {
@@ -70,10 +84,10 @@ class RetrieveTicketsID {
          for (; i < total && i < j; i++) {
             //Iterate through each bug
             String key = issues.getJSONObject(i%1000).get("key").toString();
-            LOGGER.info(key);
-         }  
+            ticketsID.add(key);
+         }
       } while (i < total);
-      return;
+      return ticketsID;
    }
 
  
