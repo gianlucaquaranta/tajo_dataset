@@ -1,4 +1,4 @@
-package it.uniroma2.isw2.utility;
+package it.uniroma2.isw2.metrics;
 
 import net.sourceforge.pmd.PMDConfiguration;
 import net.sourceforge.pmd.PmdAnalysis;
@@ -38,6 +38,15 @@ public class PmdAnalyzer {
 
     private static final Logger LOGGER =
             Logger.getLogger(PmdAnalyzer.class.getName());
+
+    /**
+     * Dimensione dello stack (in byte) del thread dedicato che esegue PMD.
+     * La type resolution di PMD ({@code TypeOps.isSubClassOfNoInterface}) puo'
+     * ricorrere in profondita' su gerarchie di tipi complesse e superare lo
+     * stack di default della JVM, provocando uno {@link StackOverflowError}.
+     * Un thread con stack ampio da' alla ricorsione lo spazio necessario.
+     */
+    private static final long PMD_STACK_SIZE = 256L * 1024 * 1024;
 
     private PmdAnalyzer() {
     }
@@ -81,11 +90,27 @@ public class PmdAnalyzer {
                         .getDefaultVersion();
         configuration.setDefaultLanguageVersion(javaVersion);
 
+        // Esecuzione mono-thread: l'analisi gira nel thread chiamante (qui il
+        // thread dedicato con stack ampio) invece che su worker con stack di
+        // default, evitando lo StackOverflowError sulla type resolution.
+        configuration.setThreads(0);
+
         configuration.addRuleSet(RULESET);
         files.stream()
                 .filter(Files::isRegularFile)
                 .forEach(configuration::addInputPath);
 
+        runOnLargeStack(() -> analyze(configuration, counts));
+
+        return counts;
+    }
+
+    /**
+     * Esegue l'analisi PMD popolando {@code counts}. Isolata dal thread di
+     * lancio cosi' da poter girare su uno stack dedicato.
+     */
+    private static void analyze(
+            PMDConfiguration configuration, Map<String, Integer> counts) {
         try (PmdAnalysis pmd = PmdAnalysis.create(configuration)) {
             Report report = pmd.performAnalysisAndCollectReport();
             for (RuleViolation violation : report.getViolations()) {
@@ -94,11 +119,28 @@ public class PmdAnalyzer {
                 counts.computeIfPresent(
                         violationKey, (k, current) -> current + 1);
             }
-        } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "PMD batch analysis failed", e);
+        } catch (Throwable t) {
+            // Include StackOverflowError (Error, non Exception): un fallimento
+            // dell'analisi lascia i conteggi a 0 per la release senza
+            // interrompere la generazione del dataset.
+            LOGGER.log(Level.SEVERE, "PMD batch analysis failed", t);
         }
+    }
 
-        return counts;
+    /**
+     * Esegue {@code task} su un thread dedicato con stack ampio
+     * ({@link #PMD_STACK_SIZE}) e ne attende il completamento.
+     */
+    private static void runOnLargeStack(Runnable task) {
+        Thread worker =
+                new Thread(null, task, "pmd-analysis", PMD_STACK_SIZE);
+        worker.start();
+        try {
+            worker.join();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            LOGGER.log(Level.SEVERE, "PMD analysis interrupted", e);
+        }
     }
 
     /**
