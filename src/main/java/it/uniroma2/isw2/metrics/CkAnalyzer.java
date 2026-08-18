@@ -62,7 +62,7 @@ public final class CkAnalyzer {
 
         new CK().calculate(repositoryPath, result -> collect(result, byFile, matchedByFileName));
 
-        LOGGER.info(() -> "CK: metriche calcolate per " + byFile.size() + " classi");
+        LOGGER.info(() -> "CK: metriche calcolate per " + byFile.size() + " classi (classi di test incluse)");
         return byFile;
     }
 
