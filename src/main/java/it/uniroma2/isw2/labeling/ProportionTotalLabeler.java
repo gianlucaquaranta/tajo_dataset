@@ -20,7 +20,7 @@ import java.util.logging.Logger;
  * <p>
  * La proporzione P viene stimata usando tutti i ticket con AV consistente
  * dell'intera storia disponibile. Per i ticket senza AV, IV viene stimata con
- * {@code IV = OV - P * (FV - OV)}. Una classe e' buggy nelle release
+ * {@code IV = FV - P * (FV - OV)}. Una classe e' buggy nelle release
  * {@code [IV, FV)}, cioe' FV e' esclusa.
  */
 public final class ProportionTotalLabeler {
@@ -65,8 +65,8 @@ public final class ProportionTotalLabeler {
             Integer iv = oldestAffectedVersion(ticket, indexByName);
             if (iv != null && iv <= base.openingVersion()) {
                 windows.add(base.withInjectedVersion(iv));
-                proportions.add((double) (base.openingVersion() - iv)
-                        / (base.fixedVersion() - base.openingVersion()));
+                proportions.add(proportion(base.fixedVersion(), iv,
+                        base.openingVersion()));
             } else {
                 windows.add(base);
             }
@@ -133,16 +133,35 @@ public final class ProportionTotalLabeler {
             List<Release> releases,
             GitRepositoryAnalyzer history) {
 
-        int ov = firstReleaseAtOrAfter(releases, ticket.openedAt());
+        int ov = activeReleaseAt(releases, ticket.openedAt());
         Optional<LocalDateTime> fixDate = history.firstFixDateFor(ticket.key());
         if (ov < 0 || fixDate.isEmpty()) {
             return Optional.empty();
         }
         int fv = firstReleaseAtOrAfter(releases, fixDate.get());
-        if (fv <= ov || fv < 0) {
+        if (fv < ov || fv < 0) {
             return Optional.empty();
         }
         return Optional.of(new TicketWindow(ticket.key(), ov, fv, null));
+    }
+
+    /**
+     * Restituisce la release attiva quando il ticket e' stato aperto: l'ultima
+     * release con data non successiva alla data di apertura. Se il ticket
+     * precede la prima release osservabile, la prima release e' il limite
+     * inferiore disponibile della storia.
+     */
+    private static int activeReleaseAt(
+            List<Release> releases,
+            LocalDateTime date) {
+        int activeRelease = 0;
+        for (int i = 0; i < releases.size(); i++) {
+            if (releases.get(i).getReleaseDate().isAfter(date)) {
+                break;
+            }
+            activeRelease = i;
+        }
+        return activeRelease;
     }
 
     private static int firstReleaseAtOrAfter(
@@ -169,9 +188,23 @@ public final class ProportionTotalLabeler {
     }
 
     private static int estimateInjectedVersion(TicketWindow window, double p) {
-        int estimate = (int) Math.round(window.openingVersion()
-                - p * (window.fixedVersion() - window.openingVersion()));
+        int estimate = (int) Math.round(window.fixedVersion()
+                - p * releaseDistance(window.fixedVersion(), window.openingVersion()));
         return Math.max(0, Math.min(window.openingVersion(), estimate));
+    }
+
+    private static double proportion(int fixedVersion, int injectedVersion,
+                                     int openingVersion) {
+        return (double) (fixedVersion - injectedVersion)
+                / releaseDistance(fixedVersion, openingVersion);
+    }
+
+    /**
+     * La tecnica Proportion Total definisce il denominatore come 1 quando
+     * FV e OV coincidono, per non perdere ticket validi e non dividere per 0.
+     */
+    private static int releaseDistance(int fixedVersion, int openingVersion) {
+        return Math.max(1, fixedVersion - openingVersion);
     }
 
     private static String normalize(String name) {
