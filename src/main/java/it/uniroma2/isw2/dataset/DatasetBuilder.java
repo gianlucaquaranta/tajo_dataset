@@ -2,6 +2,7 @@ package it.uniroma2.isw2.dataset;
 
 import com.opencsv.CSVWriter;
 import it.uniroma2.isw2.jira.DefectTicketLoader;
+import it.uniroma2.isw2.labeling.FixCommitIndex;
 import it.uniroma2.isw2.labeling.ProportionTotalLabeler;
 import it.uniroma2.isw2.metrics.GitRepositoryAnalyzer;
 import it.uniroma2.isw2.model.DefectTicket;
@@ -79,10 +80,17 @@ public class DatasetBuilder {
                 GitRepositoryAnalyzer.build(
                         git, MAIN_BRANCH, releaseDates, bugKeys);
 
+        // Indice separato per la ground truth: i fix possono comparire anche
+        // dopo l'ultima release del CSV, quindi questa scansione non ha limiti
+        // temporali. Non viene mai usata per le metriche di processo.
+        LOGGER.info("Indicizzazione dei fix commit per il labeling (history completa)...");
+        FixCommitIndex fixCommitIndex = FixCommitIndex.build(
+                git, MAIN_BRANCH, releaseDates, bugKeys);
+
         // Ground truth: P e IV usano tutti i ticket e tutte le release, mentre
         // le righe che verranno scritte restano solo quelle della M1.
         ProportionTotalLabeler labeler = ProportionTotalLabeler.build(
-                allReleases, defectTickets, gitAnalyzer);
+                allReleases, defectTickets, fixCommitIndex);
 
             try (CSVWriter writer = CsvUtils.createWriter(temporaryOutput.toString())) {
 

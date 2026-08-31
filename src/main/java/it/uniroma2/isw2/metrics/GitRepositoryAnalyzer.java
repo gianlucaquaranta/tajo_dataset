@@ -77,33 +77,13 @@ public final class GitRepositoryAnalyzer {
     /** Per ogni data-release: numero di commit nel progetto per autore (esperienza). */
     private final Map<LocalDateTime, Map<String, Integer>> authorExpByRelease;
 
-    /** Classi coinvolte nei fix, indicizzate dalla key JIRA del ticket. */
-    private final Map<String, Set<Integer>> fixTracksByTicket;
-
-    /** Data del primo fix commit noto per ciascun ticket JIRA. */
-    private final Map<String, LocalDateTime> firstFixDateByTicket;
-
     private GitRepositoryAnalyzer(
             Map<Integer, List<Revision>> revisionsByTrack,
             Map<LocalDateTime, Map<String, Integer>> pathToTrackByRelease,
-            Map<LocalDateTime, Map<String, Integer>> authorExpByRelease,
-            Map<String, Set<Integer>> fixTracksByTicket,
-            Map<String, LocalDateTime> firstFixDateByTicket) {
+            Map<LocalDateTime, Map<String, Integer>> authorExpByRelease) {
         this.revisionsByTrack = revisionsByTrack;
         this.pathToTrackByRelease = pathToTrackByRelease;
         this.authorExpByRelease = authorExpByRelease;
-        this.fixTracksByTicket = fixTracksByTicket;
-        this.firstFixDateByTicket = firstFixDateByTicket;
-    }
-
-    /**
-     * Verifica se un path git-relative e' una classe di produzione
-     * (stessa regola di JavaClassFinder: .java sotto src/main/java).
-     */
-    private static boolean isProductionClass(String path) {
-        return path != null
-                && path.endsWith(".java")
-                && path.contains("/src/main/java/");
     }
 
     /**
@@ -134,15 +114,12 @@ public final class GitRepositoryAnalyzer {
         LocalDateTime maxDate = sortedDates.get(sortedDates.size() - 1);
 
         Map<Integer, List<Revision>> revisionsByTrack = new HashMap<>();
-        Map<String, Integer> pathToTrack = new HashMap<>();
+        ClassTrackResolver tracks = new ClassTrackResolver();
         Map<LocalDateTime, Map<String, Integer>> snapshots = new HashMap<>();
         // Numero di commit (non-merge) per autore nel progetto, con fotografia
         // ad ogni data-release: base per Min EXP.
         Map<String, Integer> authorCommitCount = new HashMap<>();
         Map<LocalDateTime, Map<String, Integer>> authorExpSnapshots = new HashMap<>();
-        Map<String, Set<Integer>> fixTracksByTicket = new HashMap<>();
-        Map<String, LocalDateTime> firstFixDateByTicket = new HashMap<>();
-        int[] nextTrackId = {0};
 
         try (RevWalk walk = new RevWalk(repo);
              ObjectReader reader = repo.newObjectReader();
@@ -167,7 +144,7 @@ public final class GitRepositoryAnalyzer {
                 while (dateIdx < sortedDates.size()
                         && commitDate.isAfter(sortedDates.get(dateIdx))) {
                     snapshots.put(sortedDates.get(dateIdx),
-                            new HashMap<>(pathToTrack));
+                            tracks.snapshot());
                     authorExpSnapshots.put(sortedDates.get(dateIdx),
                             new HashMap<>(authorCommitCount));
                     dateIdx++;
@@ -179,8 +156,7 @@ public final class GitRepositoryAnalyzer {
                 }
 
                 processCommit(commit, walk, diff, reader,
-                        pathToTrack, revisionsByTrack, nextTrackId, bugKeys,
-                        fixTracksByTicket, firstFixDateByTicket);
+                        tracks, revisionsByTrack, bugKeys);
 
                 if (++processed % 250 == 0) {
                     final int done = processed;
@@ -192,7 +168,7 @@ public final class GitRepositoryAnalyzer {
             // Release con data >= dell'ultimo commit: fotografia finale.
             while (dateIdx < sortedDates.size()) {
                 snapshots.put(sortedDates.get(dateIdx),
-                        new HashMap<>(pathToTrack));
+                        tracks.snapshot());
                 authorExpSnapshots.put(sortedDates.get(dateIdx),
                         new HashMap<>(authorCommitCount));
                 dateIdx++;
@@ -204,9 +180,7 @@ public final class GitRepositoryAnalyzer {
         return new GitRepositoryAnalyzer(
                 revisionsByTrack,
                 snapshots,
-                authorExpSnapshots,
-                fixTracksByTicket,
-                firstFixDateByTicket);
+                authorExpSnapshots);
     }
 
     private static List<RevCommit> collectCommits(
@@ -228,12 +202,9 @@ public final class GitRepositoryAnalyzer {
             RevWalk walk,
             DiffFormatter diff,
             ObjectReader reader,
-            Map<String, Integer> pathToTrack,
+            ClassTrackResolver tracks,
             Map<Integer, List<Revision>> revisionsByTrack,
-            int[] nextTrackId,
-            Set<String> bugKeys,
-            Map<String, Set<Integer>> fixTracksByTicket,
-            Map<String, LocalDateTime> firstFixDateByTicket) throws IOException {
+            Set<String> bugKeys) throws IOException {
 
         // Solo commit lineari: i merge (2+ parent) raddoppierebbero il churn.
         if (commit.getParentCount() > 1) {
@@ -257,32 +228,19 @@ public final class GitRepositoryAnalyzer {
         LocalDateTime date = toLocalDateTime(commit.getCommitTime());
         Set<String> fixedTickets = matchingIssueKeys(commit, bugKeys);
         boolean bugFix = !fixedTickets.isEmpty();
-        for (String ticket : fixedTickets) {
-            firstFixDateByTicket.merge(ticket, date,
-                    (oldDate, newDate) -> oldDate.isBefore(newDate) ? oldDate : newDate);
-        }
-
         for (DiffEntry entry : entries) {
             String newPath = entry.getNewPath();
             String oldPath = entry.getOldPath();
-            boolean newIsProd = isProductionClass(newPath);
-            boolean oldIsProd = isProductionClass(oldPath);
+            boolean newIsProd = ClassTrackResolver.isProductionClass(newPath);
+            boolean oldIsProd = ClassTrackResolver.isProductionClass(oldPath);
 
             if (!newIsProd && !oldIsProd) {
                 continue;   // file non di produzione: ignorato (conta solo nel changeSet)
             }
 
-            Integer track = resolveTrack(
-                    entry, oldPath, newPath, oldIsProd,
-                    pathToTrack, nextTrackId);
+            Integer track = tracks.resolve(entry, oldPath, newPath, oldIsProd);
             if (track == null) {
                 continue;
-            }
-
-            for (String ticket : fixedTickets) {
-                fixTracksByTicket
-                        .computeIfAbsent(ticket, ignored -> new HashSet<>())
-                        .add(track);
             }
 
             int[] ad = addedDeleted(diff, entry);
@@ -333,46 +291,6 @@ public final class GitRepositoryAnalyzer {
         return matches;
     }
 
-    /**
-     * Determina il track della classe coinvolta nell'entry, aggiornando la
-     * mappa path->track in base al tipo di modifica (add/modify/rename/delete).
-     */
-    private static Integer resolveTrack(
-            DiffEntry entry,
-            String oldPath,
-            String newPath,
-            boolean oldIsProd,
-            Map<String, Integer> pathToTrack,
-            int[] nextTrackId) {
-
-        switch (entry.getChangeType()) {
-            case ADD, COPY -> {
-                int track = nextTrackId[0]++;
-                pathToTrack.put(newPath, track);
-                return track;
-            }
-            case DELETE -> {
-                Integer track = pathToTrack.remove(oldPath);
-                return (track != null) ? track : nextTrackId[0]++;
-            }
-            case RENAME -> {
-                // trasferisce l'identita' storica dal vecchio al nuovo path
-                Integer track = oldIsProd ? pathToTrack.remove(oldPath) : null;
-                if (track == null) {
-                    track = nextTrackId[0]++;
-                }
-                if (isProductionClass(newPath)) {
-                    pathToTrack.put(newPath, track);
-                }
-                return track;
-            }
-            default -> {   // MODIFY
-                return pathToTrack.computeIfAbsent(
-                        newPath, k -> nextTrackId[0]++);
-            }
-        }
-    }
-
     private static int[] addedDeleted(DiffFormatter diff, DiffEntry entry) {
         int added = 0;
         int deleted = 0;
@@ -419,17 +337,6 @@ public final class GitRepositoryAnalyzer {
         return pathToTrackByRelease
                 .getOrDefault(releaseDate, Map.of())
                 .get(gitRelativePath);
-    }
-
-    /** Track delle classi toccate dai commit di fix di un ticket JIRA. */
-    public Set<Integer> fixTracksFor(String ticketKey) {
-        return fixTracksByTicket.getOrDefault(ticketKey.toUpperCase(), Set.of());
-    }
-
-    /** Data del primo commit di fix che referenzia il ticket. */
-    public java.util.Optional<LocalDateTime> firstFixDateFor(String ticketKey) {
-        return java.util.Optional.ofNullable(
-                firstFixDateByTicket.get(ticketKey.toUpperCase()));
     }
 
     /**

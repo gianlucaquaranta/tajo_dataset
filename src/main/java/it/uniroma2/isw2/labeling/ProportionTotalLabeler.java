@@ -1,6 +1,5 @@
 package it.uniroma2.isw2.labeling;
 
-import it.uniroma2.isw2.metrics.GitRepositoryAnalyzer;
 import it.uniroma2.isw2.model.DefectTicket;
 import it.uniroma2.isw2.model.Release;
 
@@ -29,22 +28,22 @@ public final class ProportionTotalLabeler {
             Logger.getLogger(ProportionTotalLabeler.class.getName());
 
     private final Map<Integer, Set<Integer>> buggyTracksByReleaseId;
-    private final GitRepositoryAnalyzer history;
+    private final FixCommitIndex fixCommitIndex;
     private final double proportionTotal;
 
     private ProportionTotalLabeler(
             Map<Integer, Set<Integer>> buggyTracksByReleaseId,
-            GitRepositoryAnalyzer history,
+            FixCommitIndex fixCommitIndex,
             double proportionTotal) {
         this.buggyTracksByReleaseId = buggyTracksByReleaseId;
-        this.history = history;
+        this.fixCommitIndex = fixCommitIndex;
         this.proportionTotal = proportionTotal;
     }
 
     public static ProportionTotalLabeler build(
             List<Release> allReleases,
             List<DefectTicket> tickets,
-            GitRepositoryAnalyzer history) {
+            FixCommitIndex fixCommitIndex) {
 
         List<Release> releases = new ArrayList<>(allReleases);
         releases.sort(Comparator.comparing(Release::getReleaseDate));
@@ -57,7 +56,7 @@ public final class ProportionTotalLabeler {
         List<TicketWindow> windows = new ArrayList<>();
         List<Double> proportions = new ArrayList<>();
         for (DefectTicket ticket : tickets) {
-            Optional<TicketWindow> window = baseWindow(ticket, releases, history);
+            Optional<TicketWindow> window = baseWindow(ticket, releases, fixCommitIndex);
             if (window.isEmpty()) {
                 continue;
             }
@@ -87,7 +86,7 @@ public final class ProportionTotalLabeler {
             if (window.injectedVersion() == null) {
                 estimatedTickets++;
             }
-            Set<Integer> tracks = history.fixTracksFor(window.key());
+            Set<Integer> tracks = fixCommitIndex.tracksForTicket(window.key());
             if (tracks.isEmpty()) {
                 continue;
             }
@@ -104,7 +103,7 @@ public final class ProportionTotalLabeler {
         LOGGER.info(() -> "Proportion Total P=" + total
                 + " (" + knownCount + " ticket con AV); ticket etichettanti="
                 + labeledCount + ", IV stimata=" + estimatedCount);
-        return new ProportionTotalLabeler(buggyTracks, history, total);
+        return new ProportionTotalLabeler(buggyTracks, fixCommitIndex, total);
     }
 
     public boolean isBuggy(String gitRelativePath, Release release) {
@@ -117,7 +116,7 @@ public final class ProportionTotalLabeler {
             int releaseId,
             LocalDateTime releaseDate) {
 
-        Integer track = history.trackFor(gitRelativePath, releaseDate);
+        Integer track = fixCommitIndex.trackFor(gitRelativePath, releaseDate);
         return track != null
                 && buggyTracksByReleaseId
                 .getOrDefault(releaseId, Set.of())
@@ -131,10 +130,10 @@ public final class ProportionTotalLabeler {
     private static Optional<TicketWindow> baseWindow(
             DefectTicket ticket,
             List<Release> releases,
-            GitRepositoryAnalyzer history) {
+            FixCommitIndex fixCommitIndex) {
 
         int ov = activeReleaseAt(releases, ticket.openedAt());
-        Optional<LocalDateTime> fixDate = history.firstFixDateFor(ticket.key());
+        Optional<LocalDateTime> fixDate = fixCommitIndex.firstFixDateFor(ticket.key());
         if (ov < 0 || fixDate.isEmpty()) {
             return Optional.empty();
         }
