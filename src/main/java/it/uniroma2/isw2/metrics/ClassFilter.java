@@ -9,6 +9,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 /**
  * Filtro condiviso (M1 e M4) per escludere dal dataset le classi "rumore"
@@ -30,6 +31,26 @@ public final class ClassFilter {
     private static final String EXCEPTION_PACKAGE = "/exception/";
 
     private ClassFilter() {
+    }
+
+    /**
+     * Restituisce tutte le classi di produzione dello snapshot. Utile quando
+     * ulteriori filtri dipendono da metriche calcolate successivamente (M4).
+     */
+    public static List<String> findProductionClasses(Path repositoryPath)
+            throws IOException {
+        return findJavaClasses(repositoryPath).stream()
+                .filter(ClassFilter::isProductionClass)
+                .toList();
+    }
+
+    /**
+     * Seleziona i candidati M1 prima di CK: scandisce lo snapshot, esclude test
+     * e non-production, poi applica tutte le regole indipendenti da CK.
+     */
+    public static List<String> findClassesBeforeCk(Path repositoryPath)
+            throws IOException {
+        return filterBeforeCk(findJavaClasses(repositoryPath), repositoryPath);
     }
 
     /**
@@ -63,6 +84,20 @@ public final class ClassFilter {
         return included;
     }
 
+    private static List<String> findJavaClasses(Path repositoryPath)
+            throws IOException {
+        List<String> classes = new ArrayList<>();
+        try (Stream<Path> paths = Files.walk(repositoryPath)) {
+            paths.filter(Files::isRegularFile)
+                    .map(Path::toString)
+                    .map(path -> path.replace('\\', '/'))
+                    .filter(path -> path.endsWith(".java"))
+                    .map(ClassFilter::normalizePath)
+                    .forEach(classes::add);
+        }
+        return classes;
+    }
+
     /**
      * Filtri applicabili prima di CK: non dipendono dalle metriche o dal tipo
      * sintattico restituito dal tool.
@@ -85,6 +120,12 @@ public final class ClassFilter {
 
     private static boolean isProductionClass(String clazz) {
         return clazz.replace('\\', '/').contains("/src/main/java/");
+    }
+
+    /** Mantiene il formato storico della colonna CLASS: {@code tajo/...}. */
+    private static String normalizePath(String fullPath) {
+        int index = fullPath.indexOf("/tajo/");
+        return (index >= 0) ? fullPath.substring(index + 1) : fullPath;
     }
 
     /**

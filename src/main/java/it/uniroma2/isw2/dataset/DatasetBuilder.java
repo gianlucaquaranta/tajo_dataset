@@ -120,8 +120,7 @@ public class DatasetBuilder {
             // Filtro unico prima di CK: da tutti i file Java dello snapshot
             // conserva solo le classi di produzione non escluse da regole che
             // non richiedono il profilo CK.
-            List<String> classes = ClassFilter.filterBeforeCk(
-                    JavaClassFinder.findJavaClasses(Paths.get(REPOSITORY_PATH)),
+            List<String> classes = ClassFilter.findClassesBeforeCk(
                     Paths.get(REPOSITORY_PATH));
 
             CsvUtils.writeRows(
