@@ -35,21 +35,7 @@ public final class CkAnalyzer {
     }
 
     /**
-     * Esegue CK sull'intero repository e restituisce, per ciascun file, le
-     * metriche della sua classe top-level.
-     *
-     * @param repositoryPath radice del sorgente da analizzare (snapshot release)
-     * @return mappa chiave-file (path assoluto normalizzato) -> metriche C&amp;K
-     */
-    public static Map<String, CkMetrics> analyze(String repositoryPath) {
-        Map<String, ClassProfile> profiles = analyzeProfiles(repositoryPath);
-        Map<String, CkMetrics> byFile = new HashMap<>(profiles.size());
-        profiles.forEach((key, profile) -> byFile.put(key, profile.metrics()));
-        return byFile;
-    }
-
-    /**
-     * Come {@link #analyze(String)}, ma restituisce il {@link ClassProfile}
+     * Esegue CK sull'intero repository e restituisce, per ciascun file, il {@link ClassProfile}
      * completo (metriche + tipo/modifiers) per ciascun file, utile a chi deve
      * anche classificare le classi (enum, interfacce, astratte, ...).
      */
