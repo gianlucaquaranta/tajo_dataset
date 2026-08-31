@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class JavaClassFinder {
 
@@ -14,31 +15,35 @@ public class JavaClassFinder {
             Path repository)
             throws IOException {
 
-        List<String> classes =
-                new ArrayList<>();
+        return findJavaClasses(repository).stream()
+                .filter(JavaClassFinder::isProductionClass)
+                .toList();
+    }
 
-        Files.walk(repository)
-                .filter(Files::isRegularFile)
-                .forEach(path -> {
+    /** Restituisce tutti i file Java dello snapshot, inclusi i test. */
+    public static List<String> findJavaClasses(Path repository) throws IOException {
 
-                    String p =
-                            path.toString()
-                                    .replace("\\", "/");
+        List<String> classes = new ArrayList<>();
 
-                    if (!p.endsWith(".java")) {
-                        return;
-                    }
+        try (Stream<Path> paths = Files.walk(repository)) {
+            paths.filter(Files::isRegularFile)
+                    .forEach(path -> {
 
-                    if (!p.contains("/src/main/java/")) {
-                        return;
-                    }
+                        String p = path.toString().replace("\\", "/");
 
-                    classes.add(
-                            normalizePath(p)
-                    );
-                });
+                        if (!p.endsWith(".java")) {
+                            return;
+                        }
+
+                        classes.add(normalizePath(p));
+                    });
+        }
 
         return classes;
+    }
+
+    private static boolean isProductionClass(String path) {
+        return path.contains("/src/main/java/");
     }
 
     private static String normalizePath(

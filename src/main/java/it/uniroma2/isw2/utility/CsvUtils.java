@@ -57,22 +57,21 @@ public class CsvUtils {
             allClasses.put(clazz, fullPath.toAbsolutePath().normalize());
         }
 
-        // CK (tipo/modifiers + metriche di prodotto) una volta sull'intero repo:
-        // serve sia per le colonne C&K sia per il filtraggio.
+        // CK deve mantenere il contesto dell'intero snapshot per calcolare
+        // gerarchie e dipendenze tra classi. Le sue metriche vengono comunque
+        // usate soltanto per le classi sopravvissute ai filtri.
         Map<String, ClassProfile> profilesByFile =
                 CkAnalyzer.analyzeProfiles(repositoryPath);
 
-        // Filtra il rumore strutturale (test gia' esclusi a monte): tajo-thirdparty,
-        // enum/interface/abstract, eccezioni e annotation.
+        // Secondo filtro: usa il profilo CK per escludere enum e interfacce.
         Map<String, Path> classToPath = new LinkedHashMap<>();
         for (Map.Entry<String, Path> e : allClasses.entrySet()) {
-            if (!ClassFilter.isExcluded(
-                    e.getKey(), e.getValue(), profilesByFile.get(e.getValue().toString()))) {
+            ClassProfile profile = profilesByFile.get(e.getValue().toString());
+            if (!ClassFilter.isExcludedAfterCk(profile)) {
                 classToPath.put(e.getKey(), e.getValue());
             }
         }
-        LOGGER.info(() -> "Classi tenute: " + classToPath.size()
-                + " (su " + allClasses.size() + " totali)");
+        LOGGER.info(() -> "Classi tenute dopo il filtro CK: " + classToPath.size());
 
         List<Path> paths = List.copyOf(classToPath.values());
 

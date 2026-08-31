@@ -5,6 +5,7 @@ import it.uniroma2.isw2.jira.DefectTicketLoader;
 import it.uniroma2.isw2.labeling.FixCommitIndex;
 import it.uniroma2.isw2.labeling.ProportionTotalLabeler;
 import it.uniroma2.isw2.metrics.GitRepositoryAnalyzer;
+import it.uniroma2.isw2.metrics.ClassFilter;
 import it.uniroma2.isw2.model.DefectTicket;
 import it.uniroma2.isw2.model.Release;
 import org.eclipse.jgit.api.Git;
@@ -116,13 +117,12 @@ public class DatasetBuilder {
                     commit.getName()
             );
 
-            List<String> classes =
-                    JavaClassFinder
-                            .findProductionClasses(
-                                    Paths.get(
-                                            REPOSITORY_PATH
-                                    )
-                            );
+            // Filtro unico prima di CK: da tutti i file Java dello snapshot
+            // conserva solo le classi di produzione non escluse da regole che
+            // non richiedono il profilo CK.
+            List<String> classes = ClassFilter.filterBeforeCk(
+                    JavaClassFinder.findJavaClasses(Paths.get(REPOSITORY_PATH)),
+                    Paths.get(REPOSITORY_PATH));
 
             CsvUtils.writeRows(
                     writer,

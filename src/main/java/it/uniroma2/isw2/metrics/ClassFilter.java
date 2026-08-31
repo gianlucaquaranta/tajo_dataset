@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Pattern;
 
 /**
@@ -14,8 +16,8 @@ import java.util.regex.Pattern;
  * <p>
  * Esclude: modulo {@code tajo-thirdparty}, enum, interfacce, eccezioni (per
  * package {@code exception} o per nome Exception/Error) e annotation
- * ({@code @interface}). Le classi di test sono gia' escluse a monte da
- * {@code JavaClassFinder} (solo {@code src/main/java}).
+ * ({@code @interface}). Nel flusso M1 il filtro preliminare esclude anche i
+ * test, mantenendo soltanto file sotto {@code src/main/java}.
  * <p>
  * NOTA: le <b>classi astratte</b> NON sono escluse qui (possono essere classi
  * centrali con molti metodi implementati). Chi le vuole escludere - es. la M4
@@ -37,6 +39,38 @@ public final class ClassFilter {
      * @return true se la classe va esclusa dal dataset
      */
     public static boolean isExcluded(String clazz, Path path, ClassProfile profile) {
+        return isExcludedBeforeCk(clazz, path) || isExcludedAfterCk(profile);
+    }
+
+    /**
+     * Filtro unico da invocare prima di CK: scarta prima i test e le altre
+     * classi non di produzione, poi il rumore riconoscibile senza CK.
+     */
+    public static List<String> filterBeforeCk(
+            List<String> javaClasses,
+            Path repositoryPath) {
+
+        Path repositoryParent = repositoryPath.getParent();
+        List<String> included = new ArrayList<>();
+        for (String clazz : javaClasses) {
+            Path sourcePath = repositoryParent != null
+                    ? repositoryParent.resolve(clazz).toAbsolutePath().normalize()
+                    : repositoryPath.resolve(clazz).toAbsolutePath().normalize();
+            if (!isExcludedBeforeCk(clazz, sourcePath)) {
+                included.add(clazz);
+            }
+        }
+        return included;
+    }
+
+    /**
+     * Filtri applicabili prima di CK: non dipendono dalle metriche o dal tipo
+     * sintattico restituito dal tool.
+     */
+    public static boolean isExcludedBeforeCk(String clazz, Path path) {
+        if (!isProductionClass(clazz)) {
+            return true;
+        }
         if (isThirdParty(clazz)) {
             return true;
         }
@@ -46,7 +80,18 @@ public final class ClassFilter {
         if (isAnnotation(path, clazz)) {
             return true;
         }
-        // Enum e interfacce. Le classi astratte NON vengono escluse qui.
+        return false;
+    }
+
+    private static boolean isProductionClass(String clazz) {
+        return clazz.replace('\\', '/').contains("/src/main/java/");
+    }
+
+    /**
+     * Filtri che richiedono il profilo prodotto da CK. Le classi astratte NON
+     * vengono escluse nella milestone 1.
+     */
+    public static boolean isExcludedAfterCk(ClassProfile profile) {
         return profile != null && (profile.isEnum() || profile.isInterface());
     }
 
