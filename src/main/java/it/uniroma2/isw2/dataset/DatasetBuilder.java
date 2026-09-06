@@ -7,6 +7,7 @@ import it.uniroma2.isw2.labeling.ProportionTotalLabeler;
 import it.uniroma2.isw2.metrics.GitRepositoryAnalyzer;
 import it.uniroma2.isw2.metrics.ClassFilter;
 import it.uniroma2.isw2.model.DefectTicket;
+import it.uniroma2.isw2.model.DatasetRow;
 import it.uniroma2.isw2.model.Release;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.revwalk.RevCommit;
@@ -123,8 +124,7 @@ public class DatasetBuilder {
             List<String> classes = ClassFilter.findClassesBeforeCk(
                     Paths.get(REPOSITORY_PATH));
 
-            CsvUtils.writeRows(
-                    writer,
+            List<DatasetRow> rows = ReleaseDatasetRowBuilder.build(
                     classes,
                     release.getReleaseId(),
                     release.getReleaseName(),
@@ -133,6 +133,7 @@ public class DatasetBuilder {
                     release.getReleaseDate(),
                     labeler
             );
+            CsvUtils.writeRows(writer, rows);
                 }
             }
 
