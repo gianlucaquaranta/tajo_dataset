@@ -1,0 +1,31 @@
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -V -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 5 -show-stddev -print-col-names -print-row-names -enum-col-names"
+Analysing:  IR_recall
+Datasets:   1
+Resultsets: 13
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       04/09/26, 20:00
+
+
+Dataset                   (13) rules.ZeroR  | (1) meta.Attri (2) meta.Attri (3) meta.Attri (4) trees.Rand (5) lazy.IBk ' (6) bayes.Naiv (7) meta.Filte (8) meta.Filte (9) meta.Filte (10) meta.Filt (11) meta.Filt (12) meta.Filt
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+'dataset_tajo_m2-weka.fil(100)   0.00(0.00) |   0.26(0.08) v   0.35(0.08) v   0.43(0.10) v   0.23(0.09) v   0.34(0.09) v   0.50(0.10) v   0.45(0.09) v   0.49(0.10) v   0.37(0.09) v   0.43(0.09) v   0.55(0.10) v   0.37(0.08) v
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                    (v/ /*) |        (1/0/0)        (1/0/0)        (1/0/0)        (1/0/0)        (1/0/0)        (1/0/0)        (1/0/0)        (1/0/0)        (1/0/0)        (1/0/0)        (1/0/0)        (1/0/0)
+
+
+Key:
+(1) meta.AttributeSelectedClassifier '-E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1' -1151805453487947520
+(2) meta.AttributeSelectedClassifier '-E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W lazy.IBk -- -K 1 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -1151805453487947520
+(3) meta.AttributeSelectedClassifier '-E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W bayes.NaiveBayes' -1151805453487947520
+(4) trees.RandomForest '-P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1' 1116839470751428740
+(5) lazy.IBk '-K 1 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -3080186098777067000
+(6) bayes.NaiveBayes NaiveBayes-default 5995231201785697300
+(7) meta.FilteredClassifier '-F \"supervised.instance.SMOTE -C 2 -K 5 -P 202.0 -S 1\" -S 1 -W meta.AttributeSelectedClassifier -- -E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W lazy.IBk -- -K 1 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -4523450618538717200
+(8) meta.FilteredClassifier '-F \"supervised.instance.SMOTE -C 2 -K 5 -P 202.0 -S 1\" -S 1 -W meta.AttributeSelectedClassifier -- -E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W bayes.NaiveBayes' -4523450618538717200
+(9) meta.FilteredClassifier '-F \"supervised.instance.SMOTE -C 2 -K 5 -P 202.0 -S 1\" -S 1 -W trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1' -4523450618538717200
+(10) meta.FilteredClassifier '-F \"supervised.instance.SMOTE -C 2 -K 5 -P 202.0 -S 1\" -S 1 -W lazy.IBk -- -K 1 -W 0 -A \"weka.core.neighboursearch.LinearNNSearch -A \\\"weka.core.EuclideanDistance -R first-last\\\"\"' -4523450618538717200
+(11) meta.FilteredClassifier '-F \"supervised.instance.SMOTE -C 2 -K 5 -P 202.0 -S 1\" -S 1 -W bayes.NaiveBayes' -4523450618538717200
+(12) meta.FilteredClassifier '-F \"supervised.instance.SMOTE -C 2 -K 5 -P 202.0 -S 1\" -S 1 -W meta.AttributeSelectedClassifier -- -E \"CfsSubsetEval -P 1 -E 1\" -S \"BestFirst -D 1 -N 5\" -W trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1' -4523450618538717200
+(13) rules.ZeroR ZeroR-default 48055541465867952
+
