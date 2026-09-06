@@ -1,0 +1,3253 @@
+{
+  "tickets": [
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1",
+      "openedAt": "2013-03-21T09:21:59"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-10",
+      "openedAt": "2013-03-25T19:19:14"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-1000",
+      "openedAt": "2014-08-11T05:45:07"
+    },
+    {
+      "affectedVersions": ["index support"],
+      "key": "TAJO-1002",
+      "openedAt": "2014-08-11T08:23:48"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1003",
+      "openedAt": "2014-08-11T16:13:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1004",
+      "openedAt": "2014-08-13T06:07:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1006",
+      "openedAt": "2014-08-14T06:10:45"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1009",
+      "openedAt": "2014-08-18T02:16:10"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1011",
+      "openedAt": "2014-08-19T03:24:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1013",
+      "openedAt": "2014-08-19T16:00:01"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1017",
+      "openedAt": "2014-08-25T05:15:27"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1020",
+      "openedAt": "2014-08-27T09:01:37"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1021",
+      "openedAt": "2014-08-27T09:09:52"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1022",
+      "openedAt": "2014-08-29T12:59:15"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1024",
+      "openedAt": "2014-09-02T00:50:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1025",
+      "openedAt": "2014-09-02T00:53:04"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1029",
+      "openedAt": "2014-09-05T11:05:32"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-103",
+      "openedAt": "2013-08-03T04:36:12"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1037",
+      "openedAt": "2014-09-12T11:05:16"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1047",
+      "openedAt": "2014-09-17T08:47:40"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1048",
+      "openedAt": "2014-09-17T15:13:30"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1050",
+      "openedAt": "2014-09-19T06:38:47"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1055",
+      "openedAt": "2014-09-19T20:58:37"
+    },
+    {
+      "affectedVersions": [
+        "0.9.0",
+        "block_iteration"
+      ],
+      "key": "TAJO-1056",
+      "openedAt": "2014-09-19T22:27:55"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1063",
+      "openedAt": "2014-09-23T05:34:09"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1064",
+      "openedAt": "2014-09-23T07:05:19"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1065",
+      "openedAt": "2014-09-23T08:23:16"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1067",
+      "openedAt": "2014-09-24T01:20:40"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-1072",
+      "openedAt": "2014-09-25T08:36:07"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1074",
+      "openedAt": "2014-09-26T05:38:32"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1075",
+      "openedAt": "2014-09-26T06:23"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1081",
+      "openedAt": "2014-09-27T18:11:32"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1097",
+      "openedAt": "2014-10-06T15:08:21"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1098",
+      "openedAt": "2014-10-06T17:16:20"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-1099",
+      "openedAt": "2014-10-06T22:20:32"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1101",
+      "openedAt": "2014-10-07T08:55:49"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1102",
+      "openedAt": "2014-10-07T11:59:42"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1103",
+      "openedAt": "2014-10-07T17:56:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1104",
+      "openedAt": "2014-10-07T21:44:25"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1106",
+      "openedAt": "2014-10-08T06:40"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1107",
+      "openedAt": "2014-10-08T07:21:11"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1110",
+      "openedAt": "2014-10-09T04:16:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1111",
+      "openedAt": "2014-10-09T09:29:59"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1113",
+      "openedAt": "2014-10-11T22:47:47"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-1119",
+      "openedAt": "2014-10-14T07:40:12"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1126",
+      "openedAt": "2014-10-23T07:25:26"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1139",
+      "openedAt": "2014-10-27T06:55:06"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0",
+        "0.8.1",
+        "0.10.0"
+      ],
+      "key": "TAJO-1146",
+      "openedAt": "2014-10-30T06:46:37"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1147",
+      "openedAt": "2014-10-31T08:40:07"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1150",
+      "openedAt": "2014-11-02T16:53:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1154",
+      "openedAt": "2014-11-04T11:01:47"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1157",
+      "openedAt": "2014-11-06T06:35:28"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1158",
+      "openedAt": "2014-11-06T11:13:34"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1162",
+      "openedAt": "2014-11-10T08:43:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1166",
+      "openedAt": "2014-11-12T01:02:23"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1178",
+      "openedAt": "2014-11-14T08:49:43"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1179",
+      "openedAt": "2014-11-15T10:48:32"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1180",
+      "openedAt": "2014-11-15T16:54:52"
+    },
+    {
+      "affectedVersions": ["0.8.1"],
+      "key": "TAJO-1181",
+      "openedAt": "2014-11-15T18:48:18"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1183",
+      "openedAt": "2014-11-16T06:33"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1185",
+      "openedAt": "2014-11-17T10:35:21"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1188",
+      "openedAt": "2014-11-17T17:26:56"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1190",
+      "openedAt": "2014-11-18T04:41:53"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1191",
+      "openedAt": "2014-11-18T07:48:24"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1192",
+      "openedAt": "2014-11-18T07:49:56"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1194",
+      "openedAt": "2014-11-18T09:59:13"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1196",
+      "openedAt": "2014-11-18T15:22:42"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1197",
+      "openedAt": "2014-11-19T03:04:30"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-12",
+      "openedAt": "2013-03-26T18:07:17"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1200",
+      "openedAt": "2014-11-19T11:09:17"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-1205",
+      "openedAt": "2014-11-21T06:01:04"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1208",
+      "openedAt": "2014-11-25T03:39:32"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1210",
+      "openedAt": "2014-11-28T07:54:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1211",
+      "openedAt": "2014-11-30T08:05:31"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1219",
+      "openedAt": "2014-12-02T01:51:15"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1220",
+      "openedAt": "2014-12-02T06:37:59"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1223",
+      "openedAt": "2014-12-03T08:31:34"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1224",
+      "openedAt": "2014-12-03T16:02:32"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1225",
+      "openedAt": "2014-12-04T03:39:02"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1231",
+      "openedAt": "2014-12-05T02:42:44"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1232",
+      "openedAt": "2014-12-05T07:34:39"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1234",
+      "openedAt": "2014-12-05T09:04:51"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1235",
+      "openedAt": "2014-12-05T10:16:17"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1237",
+      "openedAt": "2014-12-09T06:25:55"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1239",
+      "openedAt": "2014-12-09T15:50:46"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1242",
+      "openedAt": "2014-12-11T05:09:38"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1244",
+      "openedAt": "2014-12-11T05:59:25"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1246",
+      "openedAt": "2014-12-13T03:06:33"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1249",
+      "openedAt": "2014-12-15T21:52:44"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-1250",
+      "openedAt": "2014-12-16T05:52"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1251",
+      "openedAt": "2014-12-16T07:00:01"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1252",
+      "openedAt": "2014-12-16T16:00:51"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1254",
+      "openedAt": "2014-12-17T08:01:14"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1257",
+      "openedAt": "2014-12-18T06:48:17"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1259",
+      "openedAt": "2014-12-18T17:11:52"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1265",
+      "openedAt": "2014-12-22T05:14:53"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1270",
+      "openedAt": "2014-12-26T12:14:23"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1272",
+      "openedAt": "2014-12-30T03:03:47"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1275",
+      "openedAt": "2015-01-02T03:40:20"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1276",
+      "openedAt": "2015-01-02T05:59:41"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1277",
+      "openedAt": "2015-01-05T08:35:21"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1278",
+      "openedAt": "2015-01-05T12:29:41"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1283",
+      "openedAt": "2015-01-06T19:10:49"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-1289",
+      "openedAt": "2015-01-08T15:41:03"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1297",
+      "openedAt": "2015-01-10T06:24:27"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1299",
+      "openedAt": "2015-01-11T07:38:13"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-13",
+      "openedAt": "2013-03-27T23:53:41"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-130",
+      "openedAt": "2013-08-19T08:30:51"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1303",
+      "openedAt": "2015-01-14T00:27:40"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1304",
+      "openedAt": "2015-01-14T02:15:45"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1305",
+      "openedAt": "2015-01-14T07:15:08"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1308",
+      "openedAt": "2015-01-20T11:19:36"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1312",
+      "openedAt": "2015-01-23T07:55:36"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1313",
+      "openedAt": "2015-01-23T08:33:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1316",
+      "openedAt": "2015-01-27T02:16:25"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1318",
+      "openedAt": "2015-01-27T05:53:52"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1319",
+      "openedAt": "2015-01-27T07:49:42"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1321",
+      "openedAt": "2015-01-29T07:55:44"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1322",
+      "openedAt": "2015-01-30T15:09:17"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1324",
+      "openedAt": "2015-02-02T13:59:21"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0",
+        "0.10.0"
+      ],
+      "key": "TAJO-1325",
+      "openedAt": "2015-02-03T02:35:25"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1336",
+      "openedAt": "2015-02-05T09:04:50"
+    },
+    {
+      "affectedVersions": [
+        "0.10.0",
+        "0.11.0"
+      ],
+      "key": "TAJO-1356",
+      "openedAt": "2015-02-23T08:53:58"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1360",
+      "openedAt": "2015-02-27T05:54:33"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1365",
+      "openedAt": "2015-03-01T01:38:38"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1366",
+      "openedAt": "2015-03-02T03:02:27"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1368",
+      "openedAt": "2015-03-03T05:12:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-137",
+      "openedAt": "2013-08-29T01:24:39"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1370",
+      "openedAt": "2015-03-05T05:21:48"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1371",
+      "openedAt": "2015-03-05T07:29:41"
+    },
+    {
+      "affectedVersions": [
+        "0.10.0",
+        "0.11.0"
+      ],
+      "key": "TAJO-1378",
+      "openedAt": "2015-03-09T02:58:55"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1384",
+      "openedAt": "2015-03-10T06:19:38"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1386",
+      "openedAt": "2015-03-10T08:09:33"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1387",
+      "openedAt": "2015-03-10T13:37:21"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1396",
+      "openedAt": "2015-03-12T13:14:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-14",
+      "openedAt": "2013-03-28T02:36:23"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1405",
+      "openedAt": "2015-03-16T09:00:51"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1414",
+      "openedAt": "2015-03-18T23:58:25"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1419",
+      "openedAt": "2015-03-19T05:56:56"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1434",
+      "openedAt": "2015-03-20T11:28:01"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1440",
+      "openedAt": "2015-03-22T08:55:20"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1446",
+      "openedAt": "2015-03-24T00:51:08"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1449",
+      "openedAt": "2015-03-24T08:59:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1467",
+      "openedAt": "2015-03-30T02:42:39"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1468",
+      "openedAt": "2015-03-30T03:08:49"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1469",
+      "openedAt": "2015-03-30T07:05:21"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1479",
+      "openedAt": "2015-03-30T13:30:56"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1481",
+      "openedAt": "2015-03-31T00:08:42"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1491",
+      "openedAt": "2015-03-31T21:35:36"
+    },
+    {
+      "affectedVersions": [
+        "0.9.0",
+        "0.10.0"
+      ],
+      "key": "TAJO-1497",
+      "openedAt": "2015-04-01T05:00:07"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-15",
+      "openedAt": "2013-03-28T12:09:47"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1500",
+      "openedAt": "2015-04-01T09:24:16"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-151",
+      "openedAt": "2013-09-03T23:40:14"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1510",
+      "openedAt": "2015-04-02T11:11:47"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1512",
+      "openedAt": "2015-04-03T05:41:08"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1516",
+      "openedAt": "2015-04-03T06:36:10"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-152",
+      "openedAt": "2013-09-04T05:48:48"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1522",
+      "openedAt": "2015-04-04T01:43:45"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1534",
+      "openedAt": "2015-04-07T05:41:39"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1536",
+      "openedAt": "2015-04-07T06:27:08"
+    },
+    {
+      "affectedVersions": [
+        "0.9.0",
+        "0.10.0"
+      ],
+      "key": "TAJO-1538",
+      "openedAt": "2015-04-07T07:52:47"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1540",
+      "openedAt": "2015-04-08T02:41:36"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1541",
+      "openedAt": "2015-04-08T07:06:01"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1552",
+      "openedAt": "2015-04-14T13:34:02"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1556",
+      "openedAt": "2015-04-16T05:48:14"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1558",
+      "openedAt": "2015-04-16T07:53:18"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-156",
+      "openedAt": "2013-09-04T09:41:21"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1560",
+      "openedAt": "2015-04-17T02:35:44"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1561",
+      "openedAt": "2015-04-17T03:18:24"
+    },
+    {
+      "affectedVersions": [
+        "0.9.0",
+        "0.10.0"
+      ],
+      "key": "TAJO-1564",
+      "openedAt": "2015-04-17T07:31:05"
+    },
+    {
+      "affectedVersions": [
+        "0.9.0",
+        "0.10.0"
+      ],
+      "key": "TAJO-1569",
+      "openedAt": "2015-04-18T05:11:51"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-157",
+      "openedAt": "2013-09-04T14:33:34"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1572",
+      "openedAt": "2015-04-19T11:40:43"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1574",
+      "openedAt": "2015-04-20T22:36:26"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1578",
+      "openedAt": "2015-04-22T07:35:10"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-158",
+      "openedAt": "2013-09-05T00:35:37"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1580",
+      "openedAt": "2015-04-23T01:39:36"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1581",
+      "openedAt": "2015-04-24T10:02:13"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1586",
+      "openedAt": "2015-04-28T14:50:37"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-159",
+      "openedAt": "2013-09-05T01:13:38"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1593",
+      "openedAt": "2015-05-08T02:57:51"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1594",
+      "openedAt": "2015-05-08T03:17:28"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1596",
+      "openedAt": "2015-05-09T10:00:53"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1597",
+      "openedAt": "2015-05-11T09:48:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1598",
+      "openedAt": "2015-05-11T14:03:14"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-160",
+      "openedAt": "2013-09-05T03:59:38"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1600",
+      "openedAt": "2015-05-13T06:07:32"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1605",
+      "openedAt": "2015-05-15T01:23:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1608",
+      "openedAt": "2015-05-17T02:23:31"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1610",
+      "openedAt": "2015-05-18T01:40:29"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1612",
+      "openedAt": "2015-05-18T08:15:16"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1619",
+      "openedAt": "2015-05-22T08:40:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-162",
+      "openedAt": "2013-09-05T16:39:25"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1620",
+      "openedAt": "2015-05-22T09:46:21"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1621",
+      "openedAt": "2015-05-26T00:14:18"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1622",
+      "openedAt": "2015-05-26T11:44:49"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-163",
+      "openedAt": "2013-09-05T16:49:10"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1630",
+      "openedAt": "2015-05-28T06:30:20"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1634",
+      "openedAt": "2015-06-01T16:19:06"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1642",
+      "openedAt": "2015-06-09T02:28:56"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1643",
+      "openedAt": "2015-06-13T09:25:53"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1644",
+      "openedAt": "2015-06-15T21:35:40"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-165",
+      "openedAt": "2013-09-06T13:07:44"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1650",
+      "openedAt": "2015-06-18T01:20:46"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1657",
+      "openedAt": "2015-06-23T13:44:43"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1674",
+      "openedAt": "2015-07-06T07:55:38"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-168",
+      "openedAt": "2013-09-09T02:17:55"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1681",
+      "openedAt": "2015-07-13T17:20:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1689",
+      "openedAt": "2015-07-17T09:23:08"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-169",
+      "openedAt": "2013-09-09T07:07:59"
+    },
+    {
+      "affectedVersions": [
+        "0.10.0",
+        "0.10.1"
+      ],
+      "key": "TAJO-1697",
+      "openedAt": "2015-07-22T07:50:48"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-170",
+      "openedAt": "2013-09-09T14:03:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1702",
+      "openedAt": "2015-07-24T02:27:52"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1707",
+      "openedAt": "2015-07-24T06:36:43"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-171",
+      "openedAt": "2013-09-09T15:19:12"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1712",
+      "openedAt": "2015-07-25T05:50:19"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1716",
+      "openedAt": "2015-07-28T11:20:48"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-172",
+      "openedAt": "2013-09-09T15:44:36"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1725",
+      "openedAt": "2015-07-30T08:15:45"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1727",
+      "openedAt": "2015-07-30T09:22:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1731",
+      "openedAt": "2015-07-31T01:39:14"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1732",
+      "openedAt": "2015-07-31T02:51:01"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1733",
+      "openedAt": "2015-07-31T07:58:01"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-174",
+      "openedAt": "2013-09-09T16:05:06"
+    },
+    {
+      "affectedVersions": ["0.10.1"],
+      "key": "TAJO-1741",
+      "openedAt": "2015-08-04T07:58:26"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1742",
+      "openedAt": "2015-08-05T02:15:18"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1752",
+      "openedAt": "2015-08-12T06:16:53"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1753",
+      "openedAt": "2015-08-12T08:12:55"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1763",
+      "openedAt": "2015-08-16T02:04:58"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-177",
+      "openedAt": "2013-09-10T09:04:38"
+    },
+    {
+      "affectedVersions": [
+        "0.10.0",
+        "0.11.0",
+        "0.10.1"
+      ],
+      "key": "TAJO-1776",
+      "openedAt": "2015-08-17T03:50:54"
+    },
+    {
+      "affectedVersions": [
+        "0.10.0",
+        "0.10.1"
+      ],
+      "key": "TAJO-1777",
+      "openedAt": "2015-08-17T05:35:35"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1779",
+      "openedAt": "2015-08-17T08:03:43"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1781",
+      "openedAt": "2015-08-18T06:16:08"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1782",
+      "openedAt": "2015-08-19T01:23:39"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1783",
+      "openedAt": "2015-08-19T02:51:12"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1790",
+      "openedAt": "2015-08-20T04:22:28"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1793",
+      "openedAt": "2015-08-21T06:30:51"
+    },
+    {
+      "affectedVersions": ["0.10.1"],
+      "key": "TAJO-1796",
+      "openedAt": "2015-08-21T08:39:43"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1798",
+      "openedAt": "2015-08-23T04:56:33"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1799",
+      "openedAt": "2015-08-24T03:01:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-180",
+      "openedAt": "2013-09-12T07:16:40"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1800",
+      "openedAt": "2015-08-24T03:15:57"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1801",
+      "openedAt": "2015-08-25T05:39:24"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1802",
+      "openedAt": "2015-08-26T02:28:16"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1808",
+      "openedAt": "2015-09-02T02:11:16"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1811",
+      "openedAt": "2015-09-03T09:22:27"
+    },
+    {
+      "affectedVersions": ["0.10.1"],
+      "key": "TAJO-1815",
+      "openedAt": "2015-09-04T13:25:58"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1819",
+      "openedAt": "2015-09-07T06:10:44"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-182",
+      "openedAt": "2013-09-15T10:13:16"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1820",
+      "openedAt": "2015-09-07T06:30:02"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1821",
+      "openedAt": "2015-09-07T06:54:46"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1822",
+      "openedAt": "2015-09-07T07:38:07"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1823",
+      "openedAt": "2015-09-07T09:31:28"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1827",
+      "openedAt": "2015-09-08T09:36:12"
+    },
+    {
+      "affectedVersions": [
+        "0.11.0",
+        "0.12.0"
+      ],
+      "key": "TAJO-1829",
+      "openedAt": "2015-09-08T14:22:32"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1830",
+      "openedAt": "2015-09-09T02:48:07"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1835",
+      "openedAt": "2015-09-10T13:11:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1846",
+      "openedAt": "2015-09-14T02:34:43"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1848",
+      "openedAt": "2015-09-14T21:12:08"
+    },
+    {
+      "affectedVersions": [
+        "0.11.0",
+        "0.12.0"
+      ],
+      "key": "TAJO-1851",
+      "openedAt": "2015-09-15T00:58:56"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-186",
+      "openedAt": "2013-09-17T02:05:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1861",
+      "openedAt": "2015-09-17T05:15:51"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1862",
+      "openedAt": "2015-09-17T05:23:51"
+    },
+    {
+      "affectedVersions": [
+        "0.9.0",
+        "0.10.0",
+        "0.10.1"
+      ],
+      "key": "TAJO-1869",
+      "openedAt": "2015-09-18T01:46:34"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-187",
+      "openedAt": "2013-09-17T06:54:52"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1871",
+      "openedAt": "2015-09-18T15:43:12"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1873",
+      "openedAt": "2015-09-21T06:46:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1875",
+      "openedAt": "2015-09-22T16:27:02"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1884",
+      "openedAt": "2015-09-23T09:15:05"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1886",
+      "openedAt": "2015-09-23T22:54:07"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1889",
+      "openedAt": "2015-09-24T09:38:28"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-189",
+      "openedAt": "2013-09-17T09:22:05"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1894",
+      "openedAt": "2015-09-25T13:30:22"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1895",
+      "openedAt": "2015-09-26T01:17:34"
+    },
+    {
+      "affectedVersions": ["0.12.0"],
+      "key": "TAJO-1896",
+      "openedAt": "2015-09-26T01:19:01"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1900",
+      "openedAt": "2015-09-29T13:07:27"
+    },
+    {
+      "affectedVersions": [
+        "0.11.0",
+        "0.12.0"
+      ],
+      "key": "TAJO-1901",
+      "openedAt": "2015-09-30T05:19:24"
+    },
+    {
+      "affectedVersions": [
+        "0.11.0",
+        "0.12.0"
+      ],
+      "key": "TAJO-1902",
+      "openedAt": "2015-09-30T05:35:08"
+    },
+    {
+      "affectedVersions": ["0.10.1"],
+      "key": "TAJO-1903",
+      "openedAt": "2015-10-01T05:34:33"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-191",
+      "openedAt": "2013-09-17T09:40:14"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1912",
+      "openedAt": "2015-10-06T02:21:15"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1913",
+      "openedAt": "2015-10-06T09:45:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1916",
+      "openedAt": "2015-10-07T06:28:02"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1917",
+      "openedAt": "2015-10-07T07:24:50"
+    },
+    {
+      "affectedVersions": ["0.10.1"],
+      "key": "TAJO-1918",
+      "openedAt": "2015-10-07T08:39:48"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1921",
+      "openedAt": "2015-10-12T05:19:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1923",
+      "openedAt": "2015-10-13T03:51:40"
+    },
+    {
+      "affectedVersions": [
+        "0.11.0",
+        "0.12.0"
+      ],
+      "key": "TAJO-1924",
+      "openedAt": "2015-10-13T07:32"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1926",
+      "openedAt": "2015-10-14T03:18:21"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1928",
+      "openedAt": "2015-10-14T09:52:24"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1933",
+      "openedAt": "2015-10-15T12:19:15"
+    },
+    {
+      "affectedVersions": ["0.10.1"],
+      "key": "TAJO-1935",
+      "openedAt": "2015-10-16T08:31:48"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-1954",
+      "openedAt": "2015-11-02T07:32:03"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1961",
+      "openedAt": "2015-11-05T05:36:01"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1964",
+      "openedAt": "2015-11-05T09:05:30"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-1965",
+      "openedAt": "2015-11-05T09:22:43"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1972",
+      "openedAt": "2015-11-09T05:00:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1977",
+      "openedAt": "2015-11-16T01:55:04"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1978",
+      "openedAt": "2015-11-16T03:11:20"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-198",
+      "openedAt": "2013-09-23T09:51:16"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1980",
+      "openedAt": "2015-11-17T08:30:07"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-1981",
+      "openedAt": "2015-11-18T03:11:35"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-2000",
+      "openedAt": "2015-12-02T07:34:59"
+    },
+    {
+      "affectedVersions": ["0.11.1"],
+      "key": "TAJO-2001",
+      "openedAt": "2015-12-02T08:16:14"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-2010",
+      "openedAt": "2015-12-03T09:21:56"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-2013",
+      "openedAt": "2015-12-08T07:35:02"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-2014",
+      "openedAt": "2015-12-09T08:04:48"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-2016",
+      "openedAt": "2015-12-10T01:58:34"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-2025",
+      "openedAt": "2015-12-17T02:38:58"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-203",
+      "openedAt": "2013-09-25T02:18:40"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-2034",
+      "openedAt": "2016-01-05T08:45:41"
+    },
+    {
+      "affectedVersions": [
+        "0.12.0",
+        "0.11.1"
+      ],
+      "key": "TAJO-2037",
+      "openedAt": "2016-01-06T05:43:29"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-2038",
+      "openedAt": "2016-01-06T09:09"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-205",
+      "openedAt": "2013-09-25T07:35:47"
+    },
+    {
+      "affectedVersions": ["0.12.0"],
+      "key": "TAJO-2062",
+      "openedAt": "2016-01-22T07:42:10"
+    },
+    {
+      "affectedVersions": [
+        "0.12.0",
+        "0.11.1"
+      ],
+      "key": "TAJO-2066",
+      "openedAt": "2016-01-28T08:31:57"
+    },
+    {
+      "affectedVersions": ["0.11.1"],
+      "key": "TAJO-2072",
+      "openedAt": "2016-02-02T02:57:52"
+    },
+    {
+      "affectedVersions": [
+        "0.10.0",
+        "0.11.0"
+      ],
+      "key": "TAJO-2077",
+      "openedAt": "2016-02-17T02:47:28"
+    },
+    {
+      "affectedVersions": ["0.12.0"],
+      "key": "TAJO-2078",
+      "openedAt": "2016-02-17T03:57:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-2080",
+      "openedAt": "2016-02-18T08:24:30"
+    },
+    {
+      "affectedVersions": [
+        "0.11.0",
+        "0.11.1"
+      ],
+      "key": "TAJO-2081",
+      "openedAt": "2016-02-25T05:05:06"
+    },
+    {
+      "affectedVersions": [
+        "0.11.0",
+        "0.11.1"
+      ],
+      "key": "TAJO-2082",
+      "openedAt": "2016-02-25T08:05:26"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-209",
+      "openedAt": "2013-09-25T14:03:57"
+    },
+    {
+      "affectedVersions": ["0.11.1"],
+      "key": "TAJO-2092",
+      "openedAt": "2016-03-10T05:41:38"
+    },
+    {
+      "affectedVersions": [
+        "0.12.0",
+        "0.11.1"
+      ],
+      "key": "TAJO-2093",
+      "openedAt": "2016-03-14T06:32:01"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-2095",
+      "openedAt": "2016-03-14T21:20:14"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-21",
+      "openedAt": "2013-04-01T09:15:36"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-2100",
+      "openedAt": "2016-03-17T09:38:25"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-2102",
+      "openedAt": "2016-03-18T08:08:58"
+    },
+    {
+      "affectedVersions": ["0.11.1"],
+      "key": "TAJO-2107",
+      "openedAt": "2016-03-30T07:51:42"
+    },
+    {
+      "affectedVersions": [
+        "0.11.0",
+        "0.12.0"
+      ],
+      "key": "TAJO-2110",
+      "openedAt": "2016-04-04T08:37:29"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-2119",
+      "openedAt": "2016-04-15T02:38:58"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-2135",
+      "openedAt": "2016-04-22T13:40:49"
+    },
+    {
+      "affectedVersions": ["0.11.0"],
+      "key": "TAJO-2140",
+      "openedAt": "2016-04-28T02:13:15"
+    },
+    {
+      "affectedVersions": ["0.10.0"],
+      "key": "TAJO-2143",
+      "openedAt": "2016-05-09T08:43:20"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-2150",
+      "openedAt": "2016-05-12T02:57:58"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-2151",
+      "openedAt": "2016-05-12T03:03:56"
+    },
+    {
+      "affectedVersions": ["0.11.3"],
+      "key": "TAJO-2158",
+      "openedAt": "2016-05-16T04:06:44"
+    },
+    {
+      "affectedVersions": ["0.11.3"],
+      "key": "TAJO-2162",
+      "openedAt": "2016-05-24T03:13:13"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-2163",
+      "openedAt": "2016-05-26T14:09:19"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-2164",
+      "openedAt": "2016-05-27T08:17:13"
+    },
+    {
+      "affectedVersions": [
+        "0.12.0",
+        "0.11.3"
+      ],
+      "key": "TAJO-2168",
+      "openedAt": "2016-06-29T13:02:26"
+    },
+    {
+      "affectedVersions": ["0.11.3"],
+      "key": "TAJO-2177",
+      "openedAt": "2016-07-15T12:39:28"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-2184",
+      "openedAt": "2016-10-18T06:03:30"
+    },
+    {
+      "affectedVersions": ["0.12.0"],
+      "key": "TAJO-2188",
+      "openedAt": "2018-07-10T12:54:35"
+    },
+    {
+      "affectedVersions": [
+        "0.12.0",
+        "0.11.2"
+      ],
+      "key": "TAJO-2189",
+      "openedAt": "2018-07-13T01:34:05"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-226",
+      "openedAt": "2013-10-02T12:56:38"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-241",
+      "openedAt": "2013-10-10T02:26:24"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-242",
+      "openedAt": "2013-10-11T10:45:29"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-243",
+      "openedAt": "2013-10-11T12:05:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-244",
+      "openedAt": "2013-10-12T13:17:11"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-245",
+      "openedAt": "2013-10-13T06:31:14"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-25",
+      "openedAt": "2013-04-02T07:53:17"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-250",
+      "openedAt": "2013-10-13T14:20:59"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-257",
+      "openedAt": "2013-10-16T06:03:19"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-262",
+      "openedAt": "2013-10-17T09:58:21"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-264",
+      "openedAt": "2013-10-17T12:31:18"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-268",
+      "openedAt": "2013-10-19T16:01:11"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-272",
+      "openedAt": "2013-10-21T16:47:33"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-273",
+      "openedAt": "2013-10-21T17:13:55"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-277",
+      "openedAt": "2013-10-22T04:50:11"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-281",
+      "openedAt": "2013-10-24T08:15:36"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-290",
+      "openedAt": "2013-10-28T16:35:28"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-292",
+      "openedAt": "2013-10-29T05:12:03"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-293",
+      "openedAt": "2013-10-29T21:47:55"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-294",
+      "openedAt": "2013-10-30T08:31:42"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-295",
+      "openedAt": "2013-10-31T11:15:42"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-296",
+      "openedAt": "2013-11-01T02:57:18"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-320",
+      "openedAt": "2013-11-21T08:00:12"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-321",
+      "openedAt": "2013-11-21T08:43:37"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-326",
+      "openedAt": "2013-11-24T08:43:53"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-332",
+      "openedAt": "2013-11-26T14:08:03"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-340",
+      "openedAt": "2013-11-29T08:23:31"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-344",
+      "openedAt": "2013-11-30T05:47:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-345",
+      "openedAt": "2013-11-30T11:17:17"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-347",
+      "openedAt": "2013-11-30T18:32:15"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-354",
+      "openedAt": "2013-12-02T11:27:44"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-357",
+      "openedAt": "2013-12-03T00:17:53"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-360",
+      "openedAt": "2013-12-03T03:09:07"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-372",
+      "openedAt": "2013-12-03T10:46:31"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-375",
+      "openedAt": "2013-12-04T01:14:04"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-38",
+      "openedAt": "2013-04-19T06:27:45"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-387",
+      "openedAt": "2013-12-05T15:26:59"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-388",
+      "openedAt": "2013-12-06T05:24:48"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-389",
+      "openedAt": "2013-12-06T06:14:56"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-390",
+      "openedAt": "2013-12-06T11:27:48"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-393",
+      "openedAt": "2013-12-07T03:24:41"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-403",
+      "openedAt": "2013-12-09T05:21:09"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-404",
+      "openedAt": "2013-12-09T15:21:41"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-407",
+      "openedAt": "2013-12-10T12:04:28"
+    },
+    {
+      "affectedVersions": ["0.2-incubating"],
+      "key": "TAJO-41",
+      "openedAt": "2013-04-20T08:19:37"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-410",
+      "openedAt": "2013-12-11T09:08:42"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-411",
+      "openedAt": "2013-12-11T15:49:16"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-414",
+      "openedAt": "2013-12-13T04:27:31"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-415",
+      "openedAt": "2013-12-14T04:35:36"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-417",
+      "openedAt": "2013-12-14T11:08:30"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-418",
+      "openedAt": "2013-12-15T16:19:29"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-422",
+      "openedAt": "2013-12-16T09:49:19"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-426",
+      "openedAt": "2013-12-17T06:23:59"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-427",
+      "openedAt": "2013-12-18T06:45:49"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-428",
+      "openedAt": "2013-12-18T09:35:31"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-431",
+      "openedAt": "2013-12-19T03:05:24"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-442",
+      "openedAt": "2013-12-20T05:10:10"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-443",
+      "openedAt": "2013-12-21T21:19:31"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-444",
+      "openedAt": "2013-12-21T21:25:27"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-448",
+      "openedAt": "2013-12-23T05:31:28"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-450",
+      "openedAt": "2013-12-23T07:18:09"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-451",
+      "openedAt": "2013-12-24T03:49:53"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-452",
+      "openedAt": "2013-12-25T08:19:16"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-454",
+      "openedAt": "2013-12-26T12:57:03"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-46",
+      "openedAt": "2013-04-27T05:47:08"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-467",
+      "openedAt": "2013-12-30T01:32:44"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-469",
+      "openedAt": "2013-12-31T07:34:22"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-47",
+      "openedAt": "2013-04-27T15:08:48"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-470",
+      "openedAt": "2014-01-02T01:48:55"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-479",
+      "openedAt": "2014-01-06T10:20:48"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-48",
+      "openedAt": "2013-04-28T14:31:14"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-484",
+      "openedAt": "2014-01-07T13:08:56"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-485",
+      "openedAt": "2014-01-08T03:36:06"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-488",
+      "openedAt": "2014-01-09T06:36:54"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-490",
+      "openedAt": "2014-01-10T04:54:28"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-493",
+      "openedAt": "2014-01-11T01:54:28"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-496",
+      "openedAt": "2014-01-13T01:30:40"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-502",
+      "openedAt": "2014-01-14T12:23:27"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-503",
+      "openedAt": "2014-01-14T17:06:43"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-506",
+      "openedAt": "2014-01-16T03:57:17"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-511",
+      "openedAt": "2014-01-17T07:08:32"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-518",
+      "openedAt": "2014-01-17T17:26:17"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-522",
+      "openedAt": "2014-01-19T23:36:59"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-537",
+      "openedAt": "2014-01-21T04:28:01"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-538",
+      "openedAt": "2014-01-21T05:03:08"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-54",
+      "openedAt": "2013-05-04T16:14:07"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-544",
+      "openedAt": "2014-01-22T07:34:34"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-551",
+      "openedAt": "2014-01-25T19:47:46"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-552",
+      "openedAt": "2014-01-25T20:04:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-554",
+      "openedAt": "2014-01-27T05:10:57"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-556",
+      "openedAt": "2014-01-27T09:54:37"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-558",
+      "openedAt": "2014-01-28T01:38:57"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-559",
+      "openedAt": "2014-01-28T01:45:56"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-560",
+      "openedAt": "2014-01-28T02:48:14"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-563",
+      "openedAt": "2014-01-28T11:30:58"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-565",
+      "openedAt": "2014-01-28T15:05:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-566",
+      "openedAt": "2014-01-29T02:57:02"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-567",
+      "openedAt": "2014-01-29T04:27:22"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-568",
+      "openedAt": "2014-01-29T06:22:34"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-569",
+      "openedAt": "2014-01-29T07:12:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-570",
+      "openedAt": "2014-01-29T07:44:15"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-575",
+      "openedAt": "2014-02-03T03:09:33"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-577",
+      "openedAt": "2014-02-03T09:42:59"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-581",
+      "openedAt": "2014-02-03T14:52:02"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-582",
+      "openedAt": "2014-02-04T06:46:34"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-583",
+      "openedAt": "2014-02-04T09:54:26"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-586",
+      "openedAt": "2014-02-05T06:25:44"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-588",
+      "openedAt": "2014-02-05T14:41:20"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-590",
+      "openedAt": "2014-02-08T04:31:56"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-593",
+      "openedAt": "2014-02-10T16:03:38"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-594",
+      "openedAt": "2014-02-12T09:35:01"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-595",
+      "openedAt": "2014-02-12T09:38:51"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-597",
+      "openedAt": "2014-02-12T14:39:30"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-606",
+      "openedAt": "2014-02-18T23:55:22"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-609",
+      "openedAt": "2014-02-19T12:34:47"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-610",
+      "openedAt": "2014-02-19T16:12:15"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-612",
+      "openedAt": "2014-02-20T03:44:45"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-619",
+      "openedAt": "2014-02-21T16:59:57"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-620",
+      "openedAt": "2014-02-21T17:04:07"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-624",
+      "openedAt": "2014-02-24T06:30:36"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-628",
+      "openedAt": "2014-02-24T09:41:54"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-630",
+      "openedAt": "2014-02-24T15:01:18"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-635",
+      "openedAt": "2014-02-26T02:49:45"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-638",
+      "openedAt": "2014-02-26T14:39:23"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-640",
+      "openedAt": "2014-02-27T07:53:24"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-641",
+      "openedAt": "2014-02-28T02:51:43"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-645",
+      "openedAt": "2014-03-03T10:56:49"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-646",
+      "openedAt": "2014-03-03T13:20:21"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-647",
+      "openedAt": "2014-03-04T05:12:39"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-648",
+      "openedAt": "2014-03-04T06:48:09"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-65",
+      "openedAt": "2013-05-21T19:02:48"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-650",
+      "openedAt": "2014-03-04T11:08:35"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-651",
+      "openedAt": "2014-03-04T14:28:27"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-652",
+      "openedAt": "2014-03-05T01:33:54"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-653",
+      "openedAt": "2014-03-05T01:35:07"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-66",
+      "openedAt": "2013-06-05T06:05:57"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-663",
+      "openedAt": "2014-03-06T01:44:23"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-666",
+      "openedAt": "2014-03-06T04:19:33"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-672",
+      "openedAt": "2014-03-06T13:13:07"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-679",
+      "openedAt": "2014-03-07T14:14:49"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-682",
+      "openedAt": "2014-03-09T06:47:27"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-687",
+      "openedAt": "2014-03-14T13:21:23"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-689",
+      "openedAt": "2014-03-17T07:18:59"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-690",
+      "openedAt": "2014-03-18T09:26:09"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-692",
+      "openedAt": "2014-03-19T03:21:17"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-693",
+      "openedAt": "2014-03-19T07:41:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-698",
+      "openedAt": "2014-03-21T04:00:07"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-701",
+      "openedAt": "2014-03-24T06:37:26"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-705",
+      "openedAt": "2014-03-25T07:31:25"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-706",
+      "openedAt": "2014-03-25T07:59:19"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-707",
+      "openedAt": "2014-03-25T12:40:37"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-708",
+      "openedAt": "2014-03-25T13:30:46"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-712",
+      "openedAt": "2014-03-26T05:40:06"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-713",
+      "openedAt": "2014-03-26T09:19:44"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-716",
+      "openedAt": "2014-03-26T23:25:29"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-718",
+      "openedAt": "2014-03-27T11:31:49"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-719",
+      "openedAt": "2014-03-28T10:23:30"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-729",
+      "openedAt": "2014-03-31T13:18:43"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-738",
+      "openedAt": "2014-04-07T01:19:40"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-739",
+      "openedAt": "2014-04-07T01:55:33"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-741",
+      "openedAt": "2014-04-08T02:57:21"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-748",
+      "openedAt": "2014-04-10T06:00:39"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-754",
+      "openedAt": "2014-04-11T04:47:14"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-759",
+      "openedAt": "2014-04-14T08:54:56"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-763",
+      "openedAt": "2014-04-14T14:46:56"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-765",
+      "openedAt": "2014-04-16T06:36:55"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-766",
+      "openedAt": "2014-04-16T09:01:01"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-772",
+      "openedAt": "2014-04-17T12:43:27"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-777",
+      "openedAt": "2014-04-19T01:37:23"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-786",
+      "openedAt": "2014-04-22T03:32:52"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-787",
+      "openedAt": "2014-04-22T06:49:25"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-792",
+      "openedAt": "2014-04-22T12:13:46"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-795",
+      "openedAt": "2014-04-24T10:06:38"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-799",
+      "openedAt": "2014-04-28T08:53:32"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-8",
+      "openedAt": "2013-03-25T07:23:20"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-80",
+      "openedAt": "2013-07-05T08:09:13"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-800",
+      "openedAt": "2014-04-28T09:06:14"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-802",
+      "openedAt": "2014-04-28T11:46:23"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-803",
+      "openedAt": "2014-04-28T11:55:52"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-805",
+      "openedAt": "2014-04-29T09:22:34"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-806",
+      "openedAt": "2014-04-30T03:49:38"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-808",
+      "openedAt": "2014-04-30T06:25:26"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-812",
+      "openedAt": "2014-05-07T03:50:40"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-813",
+      "openedAt": "2014-05-07T06:41:13"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-816",
+      "openedAt": "2014-05-07T08:06:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-819",
+      "openedAt": "2014-05-08T03:05:11"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-82",
+      "openedAt": "2013-07-08T05:53:02"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-821",
+      "openedAt": "2014-05-09T17:29:21"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-823",
+      "openedAt": "2014-05-12T08:10:34"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-827",
+      "openedAt": "2014-05-14T01:53:46"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-829",
+      "openedAt": "2014-05-14T06:04:09"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-830",
+      "openedAt": "2014-05-14T12:37:46"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-832",
+      "openedAt": "2014-05-19T07:04:12"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-833",
+      "openedAt": "2014-05-19T15:15:59"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-839",
+      "openedAt": "2014-05-21T12:22:34"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-848",
+      "openedAt": "2014-05-26T07:37:15"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-850",
+      "openedAt": "2014-05-26T12:41:58"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-851",
+      "openedAt": "2014-05-26T19:37:37"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-852",
+      "openedAt": "2014-05-27T01:51:26"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-858",
+      "openedAt": "2014-05-29T07:28:58"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-861",
+      "openedAt": "2014-06-02T02:24:30"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-862",
+      "openedAt": "2014-06-03T02:22:26"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-863",
+      "openedAt": "2014-06-03T07:00:11"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-866",
+      "openedAt": "2014-06-05T12:35:37"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-867",
+      "openedAt": "2014-06-05T12:41:51"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-868",
+      "openedAt": "2014-06-05T18:26:38"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-869",
+      "openedAt": "2014-06-06T22:02:41"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-871",
+      "openedAt": "2014-06-09T03:53:47"
+    },
+    {
+      "affectedVersions": ["0.8.0"],
+      "key": "TAJO-873",
+      "openedAt": "2014-06-09T11:17:49"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-874",
+      "openedAt": "2014-06-09T11:59:29"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-879",
+      "openedAt": "2014-06-17T06:56:56"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-880",
+      "openedAt": "2014-06-17T07:01:23"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-881",
+      "openedAt": "2014-06-18T08:26:26"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-882",
+      "openedAt": "2014-06-18T11:38:38"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-884",
+      "openedAt": "2014-06-20T08:04:50"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-89",
+      "openedAt": "2013-07-23T06:03:15"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-891",
+      "openedAt": "2014-06-26T10:10:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-894",
+      "openedAt": "2014-06-28T14:31:25"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-896",
+      "openedAt": "2014-06-30T07:26:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-897",
+      "openedAt": "2014-07-01T14:39:29"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-898",
+      "openedAt": "2014-07-02T02:09:14"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-899",
+      "openedAt": "2014-07-02T04:56:19"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-902",
+      "openedAt": "2014-07-03T16:09:17"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-904",
+      "openedAt": "2014-07-03T18:54:40"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-905",
+      "openedAt": "2014-07-04T00:44:54"
+    },
+    {
+      "affectedVersions": [
+        "0.8.0",
+        "0.9.0"
+      ],
+      "key": "TAJO-908",
+      "openedAt": "2014-07-04T06:22:10"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-909",
+      "openedAt": "2014-07-04T09:55:29"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-912",
+      "openedAt": "2014-07-07T01:43:12"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-913",
+      "openedAt": "2014-07-07T04:38:39"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-914",
+      "openedAt": "2014-07-07T06:59:39"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-916",
+      "openedAt": "2014-07-08T03:21:05"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-925",
+      "openedAt": "2014-07-09T06:31:37"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-926",
+      "openedAt": "2014-07-09T07:57:17"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-927",
+      "openedAt": "2014-07-09T08:24:05"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-929",
+      "openedAt": "2014-07-09T09:44:53"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-934",
+      "openedAt": "2014-07-10T11:48:31"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-936",
+      "openedAt": "2014-07-11T13:31:08"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-939",
+      "openedAt": "2014-07-14T05:32:35"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-945",
+      "openedAt": "2014-07-15T08:12:13"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-946",
+      "openedAt": "2014-07-15T15:15:11"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-947",
+      "openedAt": "2014-07-15T15:32:04"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-948",
+      "openedAt": "2014-07-15T15:43:09"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-949",
+      "openedAt": "2014-07-15T16:16:04"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-952",
+      "openedAt": "2014-07-17T04:53:25"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-957",
+      "openedAt": "2014-07-18T01:22:41"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-960",
+      "openedAt": "2014-07-18T07:59:19"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-961",
+      "openedAt": "2014-07-18T08:34:30"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-962",
+      "openedAt": "2014-07-19T16:11:29"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-965",
+      "openedAt": "2014-07-21T06:57:18"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-968",
+      "openedAt": "2014-07-21T15:15:39"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-969",
+      "openedAt": "2014-07-22T07:59:02"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-972",
+      "openedAt": "2014-07-22T10:16:53"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-974",
+      "openedAt": "2014-07-23T13:31:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-975",
+      "openedAt": "2014-07-24T05:01:18"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-977",
+      "openedAt": "2014-07-25T03:39:01"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-978",
+      "openedAt": "2014-07-25T07:52:54"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-979",
+      "openedAt": "2014-07-25T11:51:59"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-980",
+      "openedAt": "2014-07-28T01:53:19"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-981",
+      "openedAt": "2014-07-28T02:24:51"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-985",
+      "openedAt": "2014-07-29T08:32:21"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-986",
+      "openedAt": "2014-07-30T05:08:34"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-994",
+      "openedAt": "2014-08-05T09:43:47"
+    },
+    {
+      "affectedVersions": ["0.9.0"],
+      "key": "TAJO-995",
+      "openedAt": "2014-08-06T08:40:22"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-996",
+      "openedAt": "2014-08-06T09:57:09"
+    },
+    {
+      "affectedVersions": [],
+      "key": "TAJO-999",
+      "openedAt": "2014-08-07T10:27:14"
+    }
+  ],
+  "project": "TAJO"
+}
